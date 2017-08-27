@@ -11,6 +11,7 @@ web/wp-content/uploads/
 web/wp-content/wp-cache-config.php
 web/wp-content/plugins/
 web/wp-content/mu-plugins/
+node_modules
 
 gulpfile.js
 .htaccess
