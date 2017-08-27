@@ -10,6 +10,7 @@ web/wp-content/upgrade/
 web/wp-content/uploads/
 web/wp-content/wp-cache-config.php
 web/wp-content/plugins/
+web/wp-content/mu-plugins/
 
 gulpfile.js
 .htaccess
