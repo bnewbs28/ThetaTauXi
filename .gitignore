@@ -11,9 +11,9 @@ web/wp-content/uploads/
 web/wp-content/wp-cache-config.php
 web/wp-content/plugins/hello.php
 
-/gulpfile.js
-/.htaccess
-/license.txt
-/readme.html
-/sitemap.xml
-/sitemap.xml.gz
+gulpfile.js
+.htaccess
+license.txt
+readme.html
+sitemap.xml
+sitemap.xml.gz
