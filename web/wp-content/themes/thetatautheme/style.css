@@ -4,10 +4,53 @@ ul {
 a {
   text-decoration: none; }
 
+.row {
+  width: 90%;
+  margin: 0px 5%; }
+
 #header {
-  height: 250px;
+  position: relative;
+  height: 100px;
   background-color: #B71C1C; }
+  #header .logo {
+    margin-top: 25px;
+    float: left;
+    font-size: 56px;
+    margin-bottom: 0px;
+    font-family: 'Lato', sans-serif; }
   #header h1 {
     color: white; }
-  #header .menu ul {
-    margin: 0px; }
+  #header .menu {
+    margin: 0px;
+    margin-top: 55px;
+    font-size: 24px;
+    float: right; }
+    #header .menu li {
+      display: inline-block;
+      margin-left: 40px; }
+      #header .menu li a {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Lato', sans-serif; }
+
+#hero #hero-slider {
+  width: 100%; }
+  #hero #hero-slider .slide {
+    height: 750px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center; }
+    #hero #hero-slider .slide .hero-text {
+      color: #fff;
+      position: absolute;
+      bottom: 40px;
+      left: 0px;
+      right: 0px;
+      text-transform: uppercase;
+      font-size: 56px;
+      letter-spacing: 0.1em;
+      background-color: #B71C1C;
+      padding: 10px 0px;
+      font-family: 'Lato', sans-serif; }

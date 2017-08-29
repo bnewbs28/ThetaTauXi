@@ -47,16 +47,17 @@
 <body>
 <div id="wrapper" class="hfeed">
     <div id="header">
-        <div id="masthead">
+        <div class="row">
+            <div id="masthead">
+                <div id="access">
+    				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
+    				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
+    				<?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
+                    <h1 class="logo">Theta Tau</h1>
+                </div><!-- #access -->
 
-            <div id="access">
-				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
-				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
-				<?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
-                <h1>Hello Theta Tau!</h1>
-            </div><!-- #access -->
-
-        </div><!-- #masthead -->
+            </div><!-- #masthead -->
+        </div>
     </div><!-- #header -->
 
     <div id="main">

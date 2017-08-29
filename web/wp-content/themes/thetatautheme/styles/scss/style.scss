@@ -1,5 +1,6 @@
 $primary-color-red:  #B71C1C;
 
+
 html {
 
 }
@@ -22,17 +23,73 @@ a {
 h1 {
 }
 
+.row {
+    width: 90%;
+    margin: 0px 5%;
+}
+
 #header {
-    height: 250px;
+    position: relative;
+    height: 100px;
     background-color: $primary-color-red;
+
+    .logo {
+        margin-top: 25px;
+        float: left;
+        font-size: 56px;
+        margin-bottom: 0px;
+        font-family: 'Lato', sans-serif;
+    }
 
     h1 {
         color: white;
     }
 
     .menu {
-        ul {
-            margin: 0px;
+        margin: 0px;
+        margin-top: 55px;
+        font-size: 24px;
+        float: right;
+        li {
+            display: inline-block;
+            margin-left: 40px;
+            a {
+                color: #fff;
+                text-transform: uppercase;
+                font-family: 'Lato', sans-serif;
+            }
         }
     }
+}
+
+#hero {
+
+    #hero-slider {
+        width: 100%;
+        .slide {
+            height: 750px;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+
+            .hero-text {
+                color: #fff;
+                position: absolute;
+                bottom: 40px;
+                left: 0px;
+                right: 0px;
+                text-transform: uppercase;
+                font-size: 56px;
+                letter-spacing: 0.1em;
+                background-color: $primary-color-red;
+                padding: 10px 0px;
+                font-family: 'Lato', sans-serif;
+            }
+
+        }
+    }
+
+
 }

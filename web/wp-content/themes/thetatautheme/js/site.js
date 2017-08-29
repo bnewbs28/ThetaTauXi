@@ -3,7 +3,7 @@ jQuery(function( $ ) {
 
     $( '#hero-slider' ).slick({
                 arrows: false,
-                pauseOnHover: false,
+                pauseOnHover: true,
                 fade: true,
                 autoplay: true,
                 autoplaySpeed: 7000,
