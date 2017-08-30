@@ -17,7 +17,11 @@ get_header();
                 $theta_hero_image = $theta_hero_image['home_page_image'];
         ?>
             <div style="background-image: url(<?php echo $theta_hero_image ?>);" class="slide">
-            <h1 class="hero-text">Dammit Ashley</h1>
+                <div class="gear-container">
+                    <div class="gear"><h1 class="hero-text">Dammit Ashley</h1></div>
+
+                </div>
+
             </div>
 
         <?php
