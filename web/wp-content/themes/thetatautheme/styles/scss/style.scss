@@ -1,5 +1,6 @@
 $primary-color-red:  #8B0000;
 $primary-color-gold: #FFCC33;
+$icon-light-gray: #999;
 
 
 html {
@@ -122,9 +123,97 @@ h1 {
 
 }
 
+#about {
+    position: relative;
+    height: 500px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    background-color: #e1e1e1;
+
+    #about-left {
+        width: 50%;
+        display: inline-block;
+        margin: 0px;
+
+        .about-title {
+            margin-top: 70px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .about-content {
+            font-size: 18px;
+            line-height: 32px;
+        }
+        .button-link {
+            display: inline-block;
+            background-color: $primary-color-red;
+            padding: 10px 20px;
+            border: solid 1.5px $primary-color-red;
+            text-transform: uppercase;
+            transition: all .3s ease-out;
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #e1e1e1;
+            &:hover {
+                background-color: transparent;
+                color: $primary-color-red;
+            }
+        }
+    }
+}
+
+#about-pic {
+    float: right;
+    background-image: url('img/puppy.jpg');
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#rush {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    background-color: $primary-color-gold;
+     box-shadow: 0 0 100px rgba(0,0,0,0.5) inset;
+    .rush-title {
+        text-transform: uppercase;
+        color: $primary-color-red;
+        font-weight: 900;
+    }
+    .rush-content {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .button-link {
+        display: inline-block;
+        background-color: $primary-color-red;
+        padding: 10px 20px;
+        border: solid 1.5px $primary-color-red;
+        text-transform: uppercase;
+        transition: all .3s ease-out;
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: #e1e1e1;
+        &:hover {
+            background-color: transparent;
+            color: $primary-color-red;
+        }
+    }
+}
+
 #footer {
     padding: 20px 20px 0px;
-    height: 150px;
+    height: 200px;
     background-color: $primary-color-red;
     color: #fff;
     position: relative;
@@ -158,10 +247,38 @@ h1 {
     }
 
     .social-links {
+        display: block;
+        width: 100%;
         text-align: center;
+        clear:both;
         a {
             margin: 10px 20px;
             display: inline-block;
         }
+    }
+
+    .facebook {
+        fill:$icon-light-gray;
+        transition: all .3s ease-out;
+    }
+    .facebook:hover {
+        fill:#FFCC33;
+    }
+
+    .twitter {
+        fill:$icon-light-gray;
+        transition: all .3s ease-out;
+    }
+    .twitter:hover {
+        fill:#FFCC33;
+    }
+
+    .instagram {
+        fill:$icon-light-gray;
+        transition: all .3s ease-out;
+    }
+
+    .instagram:hover {
+        fill:#FFCC33;
     }
 }

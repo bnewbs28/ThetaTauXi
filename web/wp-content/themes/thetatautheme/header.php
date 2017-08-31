@@ -13,6 +13,7 @@
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <?php
         add_action( 'wp_enqueue_scripts', function() {
