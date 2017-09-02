@@ -58,7 +58,20 @@
                 </div><!-- #access -->
 
             </div><!-- #masthead -->
+
+        <div id="menu-button">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
         </div>
-    </div><!-- #header -->
+        <div id="mobile-menu">
+            <div id="mobile-menu-wrap">
+                <div id="mobile-menu-interior">
+                    <?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'mobile-menu' ) ); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- #header -->
 
     <div id="main">

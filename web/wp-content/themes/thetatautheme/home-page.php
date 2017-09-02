@@ -44,10 +44,13 @@ get_header();
 </div>
 
 <div id="rush">
-    <div class="row">
-        <h1 class="rush-title">Rush</h1>
-        <p class="rush-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu lorem felis. Nam pulvinar nunc non tellus molestie vulputate. Pellentesque sollicitudin urna non nisi rhoncus, vitae tincidunt lorem molestie. In eu sapien id nisl lacinia vulputate. Sed auctor orci accumsan tempus imperdiet. In vitae iaculis sem, in lacinia leo. Praesent in fringilla risus, vitae luctus nibh. Nunc ac tincidunt libero. Nunc suscipit, mauris eu tempus rutrum, elit est faucibus nisi, et vehicula lacus risus nec erat. Duis quis sem quam.</p>
-        <a href="/rush/" class="button-link">Learn More</a>
+    <div id="rush-pic"></div>
+    <div id="rush-right">
+        <div class="row">
+            <h1 class="rush-title">Rush</h1>
+            <p class="rush-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu lorem felis. Nam pulvinar nunc non tellus molestie vulputate. Pellentesque sollicitudin urna non nisi rhoncus, vitae tincidunt lorem molestie. In eu sapien id nisl lacinia vulputate. Sed auctor orci accumsan tempus imperdiet. In vitae iaculis sem, in lacinia leo. Praesent in fringilla risus, vitae luctus nibh. Nunc ac tincidunt libero. Nunc suscipit, mauris eu tempus rutrum, elit est faucibus nisi, et vehicula lacus risus nec erat. Duis quis sem quam.</p>
+            <a href="/rush/" class="button-link">Learn More</a>
+        </div>
     </div>
 </div>
 <?php get_footer(); ?>

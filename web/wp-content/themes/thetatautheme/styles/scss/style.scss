@@ -36,6 +36,77 @@ h1 {
     margin: 0px 5%;
 }
 
+#menu-button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    .menu-bar {
+        height: 5px;
+        width: 40px;
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+}
+
+.menu-open {
+    width: 50% !important;
+}
+
+#mobile-menu {
+
+
+
+    #mobile-menu-interior {
+        background-color: rgba(0,0,0,0.7);
+        position: fixed;
+        right: 0px;
+        top: 100px;
+        width: 0%;
+        height: 100%;
+        z-index: 9999;
+        padding: 0px;
+        transition: all .3s ease-out;
+
+        .menu {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .mobile-menu {
+
+            .menu-item {
+                text-transform: uppercase;
+                font-size: 24px;
+                padding: 20px;
+                transition: all .3s ease-out;
+
+
+                &:hover {
+                    background-color: rgba(136, 0, 0, 0.7);
+                    cursor: pointer;
+
+                    a{
+                        color: $primary-color-gold;
+                    }
+                }
+
+                a {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
 #header {
     position: relative;
     height: 100px;
@@ -53,11 +124,12 @@ h1 {
         color: white;
     }
 
-    .menu {
+    .menu-header {
         margin: 0px;
         margin-top: 55px;
         font-size: 24px;
         float: right;
+        display: none;
         li {
             display: inline-block;
             margin-left: 40px;
@@ -70,6 +142,9 @@ h1 {
                     color: $primary-color-gold;
                 }
             }
+        }
+        @media screen and (min-width: 1024px) {
+            display: block;
         }
     }
 }
@@ -172,42 +247,60 @@ h1 {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
+
+
 #rush {
+    height: 500px;
     width: 100%;
     display: inline-block;
     text-align: center;
-    padding: 20px;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     background-color: $primary-color-gold;
-     box-shadow: 0 0 100px rgba(0,0,0,0.5) inset;
-    .rush-title {
-        text-transform: uppercase;
-        color: $primary-color-red;
-        font-weight: 900;
-    }
-    .rush-content {
-        font-size: 18px;
-        line-height: 32px;
-    }
-    .button-link {
-        display: inline-block;
-        background-color: $primary-color-red;
-        padding: 10px 20px;
-        border: solid 1.5px $primary-color-red;
-        text-transform: uppercase;
-        transition: all .3s ease-out;
-        font-family: 'Lato', sans-serif;
-        font-size: 20px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        color: #e1e1e1;
-        &:hover {
-            background-color: transparent;
+
+    #rush-right {
+        width: 50%;
+        float: right;
+        .rush-title {
+            margin-top: 70px;
+            text-transform: uppercase;
             color: $primary-color-red;
+            font-weight: 900;
         }
+        .rush-content {
+            font-size: 18px;
+            line-height: 32px;
+        }
+        .button-link {
+            display: inline-block;
+            background-color: $primary-color-red;
+            padding: 10px 20px;
+            border: solid 1.5px $primary-color-red;
+            text-transform: uppercase;
+            transition: all .3s ease-out;
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #e1e1e1;
+            &:hover {
+                background-color: transparent;
+                color: $primary-color-red;
+            }
+        }
+    }
+
+    #rush-pic {
+        float: left;
+        background-image: url('img/ice.jpg');
+        width: 50%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 }
 
