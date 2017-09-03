@@ -3,7 +3,7 @@ jQuery(function( $ ) {
 
     $( '#hero-slider' ).slick({
                 arrows: false,
-                pauseOnHover: true,
+                pauseOnHover: false,
                 fade: true,
                 autoplay: true,
                 autoplaySpeed: 7000,
@@ -11,12 +11,14 @@ jQuery(function( $ ) {
             });
 
     var menuOpen = false;
-    $( '#menu-button' ).click(function(){
+    $( '#menu-button, .screen' ).click(function(){
         if (!menuOpen) {
-            $( '#mobile-menu-interior' ).addClass( 'menu-open' );
+            $( '#mobile-menu-wrap' ).addClass( 'menu-open' );
+            $('body').addClass('fixed')
             menuOpen = true;
         } else {
-            $( '#mobile-menu-interior' ).removeClass( 'menu-open' );
+            $( '#mobile-menu-wrap' ).removeClass( 'menu-open' );
+            $('body').removeClass('fixed')
             menuOpen = false;
         }
     });

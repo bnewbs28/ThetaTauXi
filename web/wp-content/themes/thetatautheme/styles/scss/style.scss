@@ -36,13 +36,18 @@ h1 {
     margin: 0px 5%;
 }
 
+.fixed {
+    position: fixed;
+    width: 100%;
+}
+
 #menu-button {
     display: block;
     height: 40px;
     width: 40px;
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 17px;
+    right: 20px;
     .menu-bar {
         height: 5px;
         width: 40px;
@@ -50,56 +55,86 @@ h1 {
         background-color: #fff;
     }
 
+        @media screen and (min-width: 768px) {
+            top: 40px;
+            right: 40px;
+        }
+
         @media screen and (min-width: 1024px) {
             display: none;
         }
 }
 
 .menu-open {
-    width: 50% !important;
+    width: 100% !important;
 }
 
 #mobile-menu {
 
-
-
-    #mobile-menu-interior {
-        background-color: rgba(0,0,0,0.7);
-        position: fixed;
-        right: 0px;
-        top: 100px;
+    #mobile-menu-wrap {
         width: 0%;
         height: 100%;
+        position: fixed;
+        right: 0px;
+        top: 70px;
         z-index: 9999;
-        padding: 0px;
         transition: all .3s ease-out;
 
-        .menu {
-            padding: 0px;
-            margin: 0px;
+        .screen {
+            width: 20%;
+            height: 100%;
+            float: left;
+
+            @media screen and (min-width: 768px) {
+                width: 50%;
+            }
         }
 
-        .mobile-menu {
+        @media screen and (min-width: 768px) {
+            top:100px;
+        }
 
-            .menu-item {
-                text-transform: uppercase;
-                font-size: 24px;
-                padding: 20px;
-                transition: all .3s ease-out;
+        #mobile-menu-interior {
+            background-color: rgba(0,0,0,0.7);
+            float: right;
+            width: 80%;
+            height: 100%;
+            padding: 0px;
+            transition: all .3s ease-out;
+            overflow-y: scroll;
 
+            @media screen and (min-width: 768px) {
+                width: 50%;
+            }
 
-                &:hover {
-                    background-color: rgba(136, 0, 0, 0.7);
-                    cursor: pointer;
+            .menu {
+                padding: 0px;
+                margin: 0px;
+            }
 
-                    a{
-                        color: $primary-color-gold;
+            .mobile-menu {
+
+                .menu-item {
+                        a{
+                            display:  inline-block;
+                            text-transform: uppercase;
+                            font-size: 24px;
+                            padding: 20px;
+                            transition: all .3s ease-out;
+                            box-sizing: border-box;
+                            width: 100%;
+
+                            &:hover {
+                                background-color: rgba(136, 0, 0, 0.7);
+                                cursor: pointer;
+                                color: $primary-color-gold;
+                        }
                     }
-                }
 
-                a {
-                    &:hover {
-                        cursor: pointer;
+                    a {
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -109,15 +144,33 @@ h1 {
 
 #header {
     position: relative;
-    height: 100px;
+    height: 70px;
     background-color: $primary-color-red;
 
-    .logo {
-        margin-top: 25px;
+    @media screen and (min-width: 768px) {
+        height: 1000px;
+    }
+
+
+    .logo-container{
         float: left;
-        font-size: 56px;
-        margin-bottom: 0px;
-        font-family: 'Lato', sans-serif;
+        .logo {
+            margin-top: 15px;
+            font-size: 36px;
+            margin-bottom: 0px;
+            font-family: 'Lato', sans-serif;
+
+            @media screen and (min-width: 768px) {
+                font-size: 56px;
+                margin-top: 25px;
+            }
+        }
+
+
+
+        .xi {
+            color: $primary-color-gold;
+        }
     }
 
     h1 {
@@ -126,7 +179,7 @@ h1 {
 
     .menu-header {
         margin: 0px;
-        margin-top: 55px;
+        margin-top: 60px;
         font-size: 24px;
         float: right;
         display: none;
@@ -137,6 +190,7 @@ h1 {
                 color: #fff;
                 text-transform: uppercase;
                 font-family: 'Lato', sans-serif;
+
 
                 &:hover {
                     color: $primary-color-gold;
@@ -149,8 +203,12 @@ h1 {
     }
 }
 
-#hero {
+#menu-primary {
+    margin: 0px;
+}
 
+#hero {
+    clear: both;
     #hero-slider {
         width: 100%;
         .slide {

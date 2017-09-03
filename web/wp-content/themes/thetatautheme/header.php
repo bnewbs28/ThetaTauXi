@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php
         if ( is_single() ) { single_post_title(); }
         elseif ( is_home() || is_front_page() ) { bloginfo('name'); print ' | '; bloginfo('description'); get_page_number(); }
@@ -54,7 +55,9 @@
     				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
     				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
     				<?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
-                    <h1 class="logo">Theta Tau</h1>
+                    <div class="logo-container">
+                        <h1 class="logo">Theta Tau <span class="xi">Xi</span></h1>
+                    </div>
                 </div><!-- #access -->
 
             </div><!-- #masthead -->
@@ -66,6 +69,8 @@
         </div>
         <div id="mobile-menu">
             <div id="mobile-menu-wrap">
+                <div class="screen">
+                </div>
                 <div id="mobile-menu-interior">
                     <?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'mobile-menu' ) ); ?>
                 </div>
