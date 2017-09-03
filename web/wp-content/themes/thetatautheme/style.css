@@ -10,7 +10,8 @@ a {
 
 .row {
   width: 90%;
-  margin: 0px 5%; }
+  margin: 0px 5%;
+  max-width: 1300px; }
 
 .fixed {
   position: fixed;
@@ -96,10 +97,13 @@ a {
   #header .logo-container {
     float: left; }
     #header .logo-container .logo {
+      display: inline-block;
       margin-top: 15px;
       font-size: 36px;
       margin-bottom: 0px;
       font-family: 'Lato', sans-serif; }
+      #header .logo-container .logo:hover {
+        color: #fff; }
       @media screen and (min-width: 768px) {
         #header .logo-container .logo {
           font-size: 56px;
@@ -201,7 +205,9 @@ a {
       margin-bottom: 10px; }
     #about #about-left .about-content {
       font-size: 18px;
-      line-height: 22px; }
+      line-height: 24px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 100; }
       @media screen and (min-width: 768px) {
         #about #about-left .about-content {
           line-height: 32px; } }
@@ -214,7 +220,7 @@ a {
       transition: all .3s ease-out;
       font-family: 'Lato', sans-serif;
       font-size: 20px;
-      margin-top: 40px;
+      margin-top: 10px;
       margin-bottom: 40px;
       color: #e1e1e1; }
       #about #about-left .button-link:hover {
@@ -260,7 +266,9 @@ a {
       font-weight: 900; }
     #rush #rush-right .rush-content {
       font-size: 18px;
-      line-height: 22px; }
+      line-height: 24px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 100; }
       @media screen and (min-width: 768px) {
         #rush #rush-right .rush-content {
           line-height: 32px; } }
@@ -307,15 +315,19 @@ a {
   @media screen and (min-width: 768px) {
     #footer {
       height: 200px; } }
-  #footer .contact-info .contact-us-foot {
-    text-transform: uppercase;
-    font-size: 24px; }
-  @media screen and (min-width: 768px) {
-    #footer .contact-info {
-      float: left; } }
-  #footer .contact-info a {
-    display: block;
-    line-height: 30px; }
+  #footer .contact-info {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100; }
+    #footer .contact-info .contact-us-foot {
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      #footer .contact-info {
+        float: left; } }
+    #footer .contact-info a {
+      display: block;
+      line-height: 30px; }
   #footer .map {
     margin-bottom: 20px; }
     #footer .map .map-link:hover {
@@ -326,7 +338,9 @@ a {
         float: right; } }
     #footer .map p {
       margin: 0px;
-      line-height: 30px; }
+      line-height: 30px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 100; }
   #footer .legal {
     text-align: center;
     display: block;
@@ -357,3 +371,27 @@ a {
     transition: all .3s ease-out; }
   #footer .instagram:hover {
     fill: #FFCC33; }
+
+.entry-content h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 48px;
+  color: #8B0000;
+  text-transform: uppercase;
+  margin-bottom: 10px; }
+
+.entry-content h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900; }
+
+.entry-content p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 18px; }
+
+#interior-hero .interior-image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }

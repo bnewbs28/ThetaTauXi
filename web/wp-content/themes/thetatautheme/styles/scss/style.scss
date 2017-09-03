@@ -34,6 +34,7 @@ h1 {
 .row {
     width: 90%;
     margin: 0px 5%;
+    max-width: 1300px;
 }
 
 .fixed {
@@ -155,10 +156,15 @@ h1 {
     .logo-container{
         float: left;
         .logo {
+            display: inline-block;
             margin-top: 15px;
             font-size: 36px;
             margin-bottom: 0px;
             font-family: 'Lato', sans-serif;
+
+            &:hover {
+                color: #fff;
+            }
 
             @media screen and (min-width: 768px) {
                 font-size: 56px;
@@ -299,7 +305,9 @@ h1 {
         }
         .about-content {
             font-size: 18px;
-            line-height: 22px;
+            line-height: 24px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 100;
 
             @media screen and (min-width: 768px) {
                 line-height: 32px;
@@ -314,7 +322,7 @@ h1 {
             transition: all .3s ease-out;
             font-family: 'Lato', sans-serif;
             font-size: 20px;
-            margin-top: 40px;
+            margin-top: 10px;
             margin-bottom: 40px;
             color: #e1e1e1;
             &:hover {
@@ -370,7 +378,9 @@ h1 {
         }
         .rush-content {
             font-size: 18px;
-            line-height: 22px;
+            line-height: 24px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 100;
 
             @media screen and (min-width: 768px) {
                 line-height: 32px;
@@ -427,10 +437,13 @@ h1 {
         height: 200px;
     }
     .contact-info {
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
 
         .contact-us-foot {
             text-transform: uppercase;
             font-size: 24px;
+            font-weight: bold;
         }
         @media screen and (min-width: 768px) {
             float: left;
@@ -457,6 +470,8 @@ h1 {
         p {
             margin: 0px;
             line-height: 30px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 100;
 
         }
     }
@@ -504,5 +519,37 @@ h1 {
 
     .instagram:hover {
         fill:#FFCC33;
+    }
+}
+
+.entry-content {
+    h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+        font-size: 48px;
+        color: $primary-color-red;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+    }
+
+    p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+    }
+}
+
+#interior-hero {
+    .interior-image {
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }

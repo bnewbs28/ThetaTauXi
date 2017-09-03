@@ -14,7 +14,7 @@
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900" rel="stylesheet">
 
     <?php
         add_action( 'wp_enqueue_scripts', function() {
@@ -56,7 +56,7 @@
     				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
     				<?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
                     <div class="logo-container">
-                        <h1 class="logo">Theta Tau <span class="xi">Xi</span></h1>
+                        <a href="/" class="logo">Theta Tau <span class="xi">Xi</span></a>
                     </div>
                 </div><!-- #access -->
 
