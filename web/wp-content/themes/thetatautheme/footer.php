@@ -2,12 +2,14 @@
 
     <div id="footer">
         <div class="contact-info">
-            <a href="/contact-us/">Contact Us</a>
+            <a href="/contact-us/" class="contact-us-foot">Contact Us</a>
             <a href="mailto:thetatauwisc@gmail.com">thetatauwisc@gmail.com</a>
         </div>
         <div class="map">
-            <p>1633 Monroe St.</p>
-            <p>Madison WI, 53711</p>
+            <a href="https://goo.gl/maps/nGLe8qnjry42" target="_blank" class="map-link">
+                <p>1633 Monroe St.</p>
+                <p>Madison WI, 53711</p>
+            </a>
         </div>
         <div class='social-links'>
             <a href="https://www.facebook.com/Theta-Tau-Professional-Engineering-Fraternity-Xi-Chapter-149696805056379/" target="_blank">

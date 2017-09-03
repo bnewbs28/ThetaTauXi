@@ -148,7 +148,7 @@ h1 {
     background-color: $primary-color-red;
 
     @media screen and (min-width: 768px) {
-        height: 1000px;
+        height: 100px;
     }
 
 
@@ -212,23 +212,35 @@ h1 {
     #hero-slider {
         width: 100%;
         .slide {
-            height: 750px;
+            height: 300px;
             width: 100%;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             text-align: center;
 
+            @media screen and (min-width: 768px) {
+                height: 500px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                height: 750px;
+            }
+
             .hero-text {
                 margin-top: 180px;
                 color: #fff;
                 text-transform: uppercase;
-                font-size: 56px;
+                font-size: 28px;
                 letter-spacing: 0.1em;
                 background-color: $primary-color-red;
                 padding: 10px 0px;
                 font-family: 'Lato', sans-serif;
                 border-radius: 10px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 56px;
+                }
             }
 
         }
@@ -242,12 +254,18 @@ h1 {
             .gear {
                 display: inline-block;
                 position: relative;
-                background-image: url('img/gear.png');
+
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: top;
-                height: 300px;
+                height: auto;
+                width: 93%;
+
+                @media screen and (min-width: 768px) {
+                background-image: url('img/gear.png');
                 width: 700px;
+                height: 300px;
+                }
 
             }
         }
@@ -258,25 +276,34 @@ h1 {
 
 #about {
     position: relative;
-    height: 500px;
-    text-align: center;
+    height: auto;
+    text-align: left;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     background-color: #e1e1e1;
 
     #about-left {
-        width: 50%;
+        text-align: center;
+        width: 100%;
         display: inline-block;
         margin: 0px;
 
+        @media screen and (min-width: 768px) {
+            width: 50%;
+        }
+
         .about-title {
-            margin-top: 70px;
+            margin-top: 40px;
             text-transform: uppercase;
             margin-bottom: 10px;
         }
         .about-content {
             font-size: 18px;
-            line-height: 32px;
+            line-height: 22px;
+
+            @media screen and (min-width: 768px) {
+                line-height: 32px;
+            }
         }
         .button-link {
             display: inline-block;
@@ -288,7 +315,7 @@ h1 {
             font-family: 'Lato', sans-serif;
             font-size: 20px;
             margin-top: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             color: #e1e1e1;
             &:hover {
                 background-color: transparent;
@@ -299,19 +326,29 @@ h1 {
 }
 
 #about-pic {
-    float: right;
+    position: relative;
     background-image: url('img/puppy.jpg');
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media screen and (min-width: 768px) {
+        height: auto;
+        width: 50%;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        right: 0px;
+    }
 }
 
 
 
 #rush {
-    height: 500px;
+    position: relative;
+    height: auto;
     width: 100%;
     display: inline-block;
     text-align: center;
@@ -320,17 +357,24 @@ h1 {
     background-color: $primary-color-gold;
 
     #rush-right {
-        width: 50%;
-        float: right;
+        width: 100%;
+        @media screen and (min-width: 768px) {
+            width: 50%;
+            float: right;
+        }
         .rush-title {
-            margin-top: 70px;
+            margin-top: 40px;
             text-transform: uppercase;
             color: $primary-color-red;
             font-weight: 900;
         }
         .rush-content {
             font-size: 18px;
-            line-height: 32px;
+            line-height: 22px;
+
+            @media screen and (min-width: 768px) {
+                line-height: 32px;
+            }
         }
         .button-link {
             display: inline-block;
@@ -342,7 +386,7 @@ h1 {
             font-family: 'Lato', sans-serif;
             font-size: 20px;
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             color: #e1e1e1;
             &:hover {
                 background-color: transparent;
@@ -352,26 +396,45 @@ h1 {
     }
 
     #rush-pic {
-        float: left;
-        background-image: url('img/ice.jpg');
-        width: 50%;
-        height: 100%;
+        position: relative;
+        width: 100%;
+        height: 300px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        @media screen and (min-width: 768px) {
+            height: auto;
+            width: 50%;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
     }
 }
 
 #footer {
+    text-align: center;
     padding: 20px 20px 0px;
-    height: 200px;
+    height: 275px;
     background-color: $primary-color-red;
     color: #fff;
     position: relative;
     width: 100%;
     box-sizing: border-box;
+    @media screen and (min-width: 768px) {
+        height: 200px;
+    }
     .contact-info {
-        float: left;
+
+        .contact-us-foot {
+            text-transform: uppercase;
+            font-size: 24px;
+        }
+        @media screen and (min-width: 768px) {
+            float: left;
+        }
         a {
             display: block;
             line-height: 30px;
@@ -379,7 +442,17 @@ h1 {
     }
 
     .map {
-        float: right;
+        margin-bottom: 20px;
+
+        .map-link {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0px;
+            float: right;
+        }
 
         p {
             margin: 0px;
