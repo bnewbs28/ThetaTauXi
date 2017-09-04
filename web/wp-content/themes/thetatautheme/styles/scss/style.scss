@@ -1,3 +1,12 @@
+/**
+
+Theme Name: Theta Tau Theme
+
+Theme Description: The theme for the Theta Tau website.
+
+*/
+
+
 $primary-color-red:  #8B0000;
 $primary-color-gold: #FFCC33;
 $icon-light-gray: #999;
@@ -33,13 +42,41 @@ h1 {
 
 .row {
     width: 90%;
-    margin: 0px 5%;
+    padding: 0px 5%;
     max-width: 1300px;
+    margin: auto;
 }
 
 .fixed {
     position: fixed;
     width: 100%;
+}
+
+.alignleft {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0px 15px 15px 0px;
+}
+
+.alignright {
+    position: relative;
+    display: block;
+    float: right;
+    margin: 0px 0px 15px 15px;
+}
+
+.aligncenter {
+    position: relative;
+    display: block;
+    float: none;
+    margin: 15px auto;
+}
+
+.alignnone {
+    position: relative;
+    display: block;
+    margin: 0px 0px 15px 0px;
 }
 
 #menu-button {
@@ -74,7 +111,7 @@ h1 {
 
     #mobile-menu-wrap {
         width: 0%;
-        height: 100%;
+        height: calc(100% - 70px);
         position: fixed;
         right: 0px;
         top: 70px;
@@ -93,6 +130,7 @@ h1 {
 
         @media screen and (min-width: 768px) {
             top:100px;
+            height: calc(100% - 100px );
         }
 
         #mobile-menu-interior {
@@ -103,6 +141,7 @@ h1 {
             padding: 0px;
             transition: all .3s ease-out;
             overflow-y: scroll;
+            overflow-x: hidden;
 
             @media screen and (min-width: 768px) {
                 width: 50%;
@@ -116,6 +155,7 @@ h1 {
             .mobile-menu {
 
                 .menu-item {
+                    width: 512px;
                         a{
                             display:  inline-block;
                             text-transform: uppercase;
@@ -147,6 +187,7 @@ h1 {
     position: relative;
     height: 70px;
     background-color: $primary-color-red;
+    padding: 0px 5%;
 
     @media screen and (min-width: 768px) {
         height: 100px;
@@ -324,7 +365,7 @@ h1 {
             font-size: 20px;
             margin-top: 10px;
             margin-bottom: 40px;
-            color: #e1e1e1;
+            color: #fff;
             &:hover {
                 background-color: transparent;
                 color: $primary-color-red;
@@ -397,7 +438,7 @@ h1 {
             font-size: 20px;
             margin-top: 10px;
             margin-bottom: 40px;
-            color: #e1e1e1;
+            color: #fff;
             &:hover {
                 background-color: transparent;
                 color: $primary-color-red;
@@ -523,6 +564,8 @@ h1 {
 }
 
 .entry-content {
+    padding-bottom: 40px;
+    padding-top: 40px;
     h2 {
         font-family: 'Lato', sans-serif;
         font-weight: 100;
@@ -533,6 +576,7 @@ h1 {
     }
 
     h3 {
+        margin-top: 40px;
         font-family: 'Lato', sans-serif;
         font-weight: 900;
     }
@@ -541,6 +585,25 @@ h1 {
         font-family: 'Lato', sans-serif;
         font-weight: 100;
         font-size: 18px;
+    }
+
+    a {
+        color: $primary-color-red;
+        transition: all .3s ease-out;
+        &:hover {
+            color: $primary-color-gold;
+        }
+    }
+
+    ul {
+        list-style: initial;
+
+        li {
+            font-family: 'Lato', sans-serif;
+            font-weight: 100;
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
 }
 
@@ -551,5 +614,9 @@ h1 {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+
+        @media screen and (min-width: 1024px) {
+            height: 350px;
+        }
     }
 }

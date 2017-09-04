@@ -49,31 +49,29 @@
 <body>
 <div id="wrapper" class="hfeed">
     <div id="header">
-        <div class="row">
-            <div id="masthead">
-                <div id="access">
-    				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
-    				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
-    				<?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
-                    <div class="logo-container">
-                        <a href="/" class="logo">Theta Tau <span class="xi">Xi</span></a>
-                    </div>
-                </div><!-- #access -->
-
-            </div><!-- #masthead -->
-
-        <div id="menu-button">
-            <div class="menu-bar"></div>
-            <div class="menu-bar"></div>
-            <div class="menu-bar"></div>
-        </div>
-        <div id="mobile-menu">
-            <div id="mobile-menu-wrap">
-                <div class="screen">
+        <div id="masthead">
+            <div id="access">
+				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
+				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
+				<?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
+                <div class="logo-container">
+                    <a href="/" class="logo">Theta Tau <span class="xi">Xi</span></a>
                 </div>
-                <div id="mobile-menu-interior">
-                    <?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'mobile-menu' ) ); ?>
-                </div>
+            </div><!-- #access -->
+
+        </div><!-- #masthead -->
+
+    <div id="menu-button">
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+    </div>
+    <div id="mobile-menu">
+        <div id="mobile-menu-wrap">
+            <div class="screen">
+            </div>
+            <div id="mobile-menu-interior">
+                <?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'mobile-menu' ) ); ?>
             </div>
         </div>
     </div>
