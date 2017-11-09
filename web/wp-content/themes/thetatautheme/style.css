@@ -105,6 +105,11 @@ a {
     #mobile-menu #mobile-menu-wrap #mobile-menu-interior .menu {
       padding: 0px;
       margin: 0px; }
+    #mobile-menu #mobile-menu-wrap #mobile-menu-interior .mobile-menu .sub-menu {
+      display: none; }
+      #mobile-menu #mobile-menu-wrap #mobile-menu-interior .mobile-menu .sub-menu li {
+        width: 60%;
+        box-sizing: border-box; }
     #mobile-menu #mobile-menu-wrap #mobile-menu-interior .mobile-menu .menu-item {
       width: 512px; }
       #mobile-menu #mobile-menu-wrap #mobile-menu-interior .mobile-menu .menu-item a {
@@ -156,7 +161,8 @@ a {
     display: none; }
     #header .menu-header li {
       display: inline-block;
-      margin-left: 40px; }
+      margin-left: 40px;
+      padding-bottom: 16px; }
       #header .menu-header li a {
         color: #fff;
         text-transform: uppercase;
@@ -167,8 +173,39 @@ a {
       #header .menu-header {
         display: block; } }
 
+.selected {
+  display: block; }
+
 #menu-primary {
-  margin: 0px; }
+  margin: 0px;
+  margin-top: -5px; }
+  #menu-primary li {
+    position: relative; }
+  #menu-primary .sub-menu {
+    display: none;
+    position: absolute;
+    left: -20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    margin: 0px;
+    width: 200px;
+    top: 45px;
+    padding: 0px; }
+    #menu-primary .sub-menu li {
+      padding: 0px;
+      margin: 0px;
+      width: 100%; }
+      #menu-primary .sub-menu li a {
+        display: block;
+        margin: 0px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        font-size: 18px;
+        transition: all .3s ease-out; }
+        #menu-primary .sub-menu li a:hover {
+          background-color: rgba(136, 0, 0, 0.7);
+          cursor: pointer;
+          color: #FFCC33; }
 
 #hero {
   clear: both; }
@@ -186,7 +223,7 @@ a {
           height: 500px; } }
       @media screen and (min-width: 1024px) {
         #hero #hero-slider .slide {
-          height: 750px; } }
+          height: calc(100vh - 100px); } }
       #hero #hero-slider .slide .hero-text {
         margin-top: 180px;
         color: #fff;
@@ -239,14 +276,20 @@ a {
       margin-top: 40px;
       text-transform: uppercase;
       margin-bottom: 10px; }
+      @media screen and (min-width: 768px) {
+        #about #about-left .about-title {
+          margin-top: 70px;
+          font-size: 56px; } }
     #about #about-left .about-content {
       font-size: 18px;
       line-height: 24px;
       font-family: 'Lato', sans-serif;
-      font-weight: 100; }
+      font-weight: 100;
+      margin: auto; }
       @media screen and (min-width: 768px) {
         #about #about-left .about-content {
-          line-height: 32px; } }
+          font-size: 24px;
+          line-height: 36px; } }
     #about #about-left .button-link {
       display: inline-block;
       background-color: #8B0000;
@@ -259,6 +302,10 @@ a {
       margin-top: 10px;
       margin-bottom: 40px;
       color: #fff; }
+      @media screen and (min-width: 768px) {
+        #about #about-left .button-link {
+          margin-bottom: 70px;
+          font-size: 32px; } }
       #about #about-left .button-link:hover {
         background-color: transparent;
         color: #8B0000; }
@@ -300,6 +347,10 @@ a {
       text-transform: uppercase;
       color: #8B0000;
       font-weight: 900; }
+      @media screen and (min-width: 768px) {
+        #rush #rush-right .rush-title {
+          margin-top: 70px;
+          font-size: 56px; } }
     #rush #rush-right .rush-content {
       font-size: 18px;
       line-height: 24px;
@@ -307,7 +358,8 @@ a {
       font-weight: 100; }
       @media screen and (min-width: 768px) {
         #rush #rush-right .rush-content {
-          line-height: 32px; } }
+          font-size: 24px;
+          line-height: 36px; } }
     #rush #rush-right .button-link {
       display: inline-block;
       background-color: #8B0000;
@@ -320,6 +372,10 @@ a {
       margin-top: 10px;
       margin-bottom: 40px;
       color: #fff; }
+      @media screen and (min-width: 768px) {
+        #rush #rush-right .button-link {
+          margin-bottom: 70px;
+          font-size: 32px; } }
       #rush #rush-right .button-link:hover {
         background-color: transparent;
         color: #8B0000; }

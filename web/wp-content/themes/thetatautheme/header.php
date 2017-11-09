@@ -53,7 +53,9 @@
             <div id="access">
 				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
 				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
-				<?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
+                <div id="menu-wrap">
+				    <?php wp_nav_menu( array( 'menu' => 'Primary', 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
+                </div>
                 <div class="logo-container">
                     <a href="/" class="logo">Theta Tau <span class="xi">Xi</span></a>
                 </div>
