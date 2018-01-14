@@ -881,13 +881,13 @@ h1 {
             padding-bottom: 0px;
         }
 
-        .entry-utility {
-            display: none;
-        }
-
         .published {
             text-decoration: none;
             border-bottom: none;
+        }
+
+        .entry-utility {
+            display: none;
         }
 
         .entry-meta {
@@ -903,19 +903,196 @@ h1 {
     }
 }
 
-#blog-single {
-    .entry-utility {
-        display: none;
-    }
-
-    #respond {
-        display: none;
-    }
-}
-
 //search page
 .page-title {
     @media screen and (min-width: 1024px) {
         font-size: 36px;
     }
+}
+
+#main-content {
+    margin-bottom: 70px;
+
+    h2 {
+        font-size: 24px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 48px;
+        }
+
+    }
+
+    img {
+
+        width: 100%;
+        height: auto;
+
+        @media screen and (min-width: 500px) {
+            width: initial;
+        }
+
+    }
+
+    #blog-slider {
+        height: 250px;
+        max-width: 700px;
+        width: 100%;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        @media (min-width: 500px) {
+            height: 325px;
+        }
+
+        @media screen and (min-width: 768px) {
+            height: 400px;
+            display: block;
+            max-width: 700px;
+            width: 80%;
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            height: 600px;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        .slide {
+            height: 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (min-width: 500px) {
+                height: 325px;
+            }
+
+            @media screen and (min-width: 768px) {
+                display: block;
+                max-width: 700px;
+                width: 80%;
+                height: 400px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                max-width: 1000px;
+                width: 80%;
+                height: 600px;
+            }
+        }
+
+        .slick-prev {
+            float: left;
+            width: 13px;
+            height: 36px;
+            background: url('img/slider-arrow.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            text-indent: 99999px;
+            overflow: hidden;
+            border: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -50px;
+            outline: none;
+            cursor: pointer;
+            z-index: 200;
+            display: none;
+            transition: all .3s ease-out;
+
+            @media (min-width: 900px) {
+                left: -100px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                display: block;
+            }
+        }
+
+        .slick-arrow {
+            display: none !important;
+
+            @media screen and (min-width: 768px) {
+                display: block !important;
+            }
+
+        }
+
+        .slick-next {
+            float: right;
+            width: 13px;
+            height: 36px;
+            background: url('img/slider-arrow.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            text-indent: 99999px;
+            overflow: hidden;
+            border: none;
+            position: absolute;
+            top: calc(50% - 18px);
+            transform: translateY(-50%);
+            transform: rotate(180deg);
+            right: -50px;
+            outline: none;
+            cursor: pointer;
+            display: none;
+
+            @media (min-width: 900px) {
+                right: -100px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                display: block;
+            }
+        }
+
+        .slick-dots {
+            text-align: center;
+            padding: 0px;
+            margin-left: 0px;
+            margin-top: 20px;
+            li {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display:  inline-block;
+            }
+            left: 0px !important;
+                button {
+                    border-radius: 50%;
+                    width: 10px !important;
+                    height: 10px;
+                    color: transparent;
+                    padding: 0px;
+                    background-color: #999;
+                    border: 0px;
+                    margin-left: 2.5px;
+                    margin-right: 2.5px;
+                }
+            }
+
+
+
+
+            .slick-active {
+                button {
+                    background-color: $primary-color-red;
+                }
+            }
+        }
+    }
+}
+
+#comments {
+    display: none;
+}
+
+#nav-below {
+    text-align: center;
 }

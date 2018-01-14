@@ -10,6 +10,16 @@ jQuery(function($) {
                 speed: 1000
             });
 
+            $('#blog-slider').slick({
+                arrows: true,
+                pauseOnHover: true,
+                fade: true,
+                autoplay: true,
+                dots: true,
+                autoplaySpeed: 7000,
+                speed: 1000
+            });
+
             var menuOpen = false;
             $('#menu-button, .screen').click(function() {
                 if (!menuOpen) {

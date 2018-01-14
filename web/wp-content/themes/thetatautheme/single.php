@@ -17,7 +17,7 @@
         </div>
     </div>
 </div>
-<div id="blog-single">
+<div id="blog">
 <div id="container">
     <div id="content" class="entry-content">
         <div class="row">
@@ -27,8 +27,29 @@
                 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 					<h2 class="entry-title"><?php the_title(); ?></h2>
-
-					<div class="entry-content">
+                    <div class="entry-meta">
+                        <span class="meta-prep meta-prep-author"><?php _e('By ', 'hbd-theme'); ?></span>
+                        <span class="author vcard"><a class="url fn n" href="<?php echo get_author_link( false, $authordata->ID, $authordata->user_nicename ); ?>" title="<?php printf( __( 'View all posts by %s', 'hbd-theme' ), $authordata->display_name ); ?>"><?php the_author(); ?></a></span>
+                        <span class="meta-sep"> | </span>
+                        <span class="meta-prep meta-prep-entry-date"><?php _e('Published ', 'hbd-theme'); ?></span>
+                        <span class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr></span>
+                        <?php edit_post_link( __( 'Edit', 'hbd-theme' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t" ) ?>
+                    </div><!-- .entry-meta -->
+					<div id="main-content">
+                        <?php if (!empty(CFS()->get("news_story_slider"))) { ?>
+                        <div id="blog-slider"><!-- Editable via CFS (image should be put as background image to slides below) -->
+                            <?php
+                                $theta_blog_images = CFS()->get("news_story_slider");
+                                foreach ( $theta_blog_images as $theta_blog_image ) :
+                                    $theta_blog_image_url = $theta_blog_image['news_image'];
+                            ?>
+                                <div style="background-image: url('<?php echo $theta_blog_image_url ?>');" class="slide">
+                                </div>
+                            <?php
+                                endforeach;
+                            ?>
+                        </div>
+                    <?php } ?>
 						<?php the_content(); ?>
 						<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'hbd-theme' ) . '&after=</div>') ?>
 					</div><!-- .entry-utility -->
@@ -54,7 +75,7 @@
                 </div><!-- #post-<?php the_ID(); ?> -->
 
                 <div id="nav-below" class="navigation">
-						<?php previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' ) ?> <span style="color: #bbb;">&#8226;</span> <?php next_post_link( '%link', '%title <span class="meta-nav">&raquo;</span>' ) ?>
+						<?php previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> Previous Article' ) ?> <span style="color: #bbb;">&#8226;</span> <?php next_post_link( '%link', 'Next Article <span class="meta-nav">&raquo;</span>' ) ?>
 				</div><!-- #nav-below -->
 
  				<?php comments_template('', true); ?>
