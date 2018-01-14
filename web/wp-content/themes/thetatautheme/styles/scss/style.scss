@@ -37,7 +37,18 @@ a {
     }
 }
 
+.clear {
+    position: relative;
+    display: block;
+    clear: both;
+}
+
 h1 {
+
+}
+
+.screen-reader-text {
+    visibility: hidden;
 }
 
 .row {
@@ -270,6 +281,7 @@ h1 {
 
     li {
         position: relative;
+        cursor: pointer;
     }
 
     .sub-menu {
@@ -288,6 +300,7 @@ h1 {
             padding: 0px;
             margin: 0px;
             width: 100%;
+            cursor: pointer;
 
 
             a {
@@ -445,7 +458,6 @@ h1 {
 
 #about-pic {
     position: relative;
-    background-image: url('img/puppy.jpg');
     width: 100%;
     height: 300px;
     background-repeat: no-repeat;
@@ -649,10 +661,18 @@ h1 {
     h2 {
         font-family: 'Lato', sans-serif;
         font-weight: 100;
-        font-size: 48px;
+        font-size: 32px;
         color: $primary-color-red;
         text-transform: uppercase;
         margin-bottom: 10px;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 48px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        padding-bottom: 100px;
+        padding-top: 100px;
     }
 
     h3 {
@@ -688,15 +708,214 @@ h1 {
 }
 
 #interior-hero {
+    position: relative;
     .interior-image {
         width: 100%;
         height: 250px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        text-align: center;
+
 
         @media screen and (min-width: 1024px) {
             height: 350px;
         }
+    }
+
+    .hero-title-container {
+        position: absolute;
+        transform: translateY(-50%);
+        //position: relative;
+        width: 100%;
+        text-align: center;
+
+
+
+        margin: auto;
+        .hero-title {
+            display: inline-block;
+            background-color: $primary-color-red;
+            padding: 10px 10px;
+            border-radius: 30px;
+            width: 80%;
+            box-sizing: border-box;
+
+            @media screen and (min-width: 1024px) {
+                width: auto;
+                min-width: 500px;
+                padding: 10px 40px;
+            }
+
+            h1 {
+                font-family: 'Lato', sans-serif;
+                font-weight: normal;
+                font-size: 36px;
+                color: #fff;
+                letter-spacing: 2px;
+                margin: 5px;
+                padding: 0px 5px;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 56px;
+                }
+
+            }
+        }
+    }
+}
+
+#blog {
+    .post {
+        position: relative;
+        min-height: 100px;
+
+        @media screen and (min-width: 500px) {
+            min-height: 150px;
+        }
+
+        @media screen and (min-width: 768px) {
+            min-height: 300px;
+        }
+
+        .thumbnail-link {
+            .thumbnail-shade {
+                opacity: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba($primary-color-gold, 0.8);
+                transition: all .3s ease-out;
+                position: relative;
+
+                h1 {
+                    color: $primary-color-red;
+                    position: absolute;
+                    text-align: center;
+                    right: 0px;
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 64px;
+                    margin: 0px;
+                }
+            }
+
+            &:hover {
+                .thumbnail-shade {
+                    @media screen and (min-width: 768px) {
+                    opacity: 1;
+                    }
+                    h1 {
+                        color: $primary-color-red;
+                    }
+                }
+            }
+        }
+
+        .post-thumbnail {
+            width: 100px;
+            margin-top: 6px;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            box-shadow: 0px 0px 10px #666;
+
+            @media screen and (min-width: 500px) {
+                margin-top: 8px;
+                width: 150px;
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-top: 12px;
+                width: 300px;
+            }
+        }
+
+        .post-info {
+            padding-left: 120px;
+
+            @media screen and (min-width: 500px) {
+                padding-left: 170px;
+            }
+
+            @media screen and (min-width: 768px) {
+                padding-left: 340px;
+            }
+
+            .excerpt {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                    display: inline;
+                }
+            }
+
+
+            h2 {
+                text-transform: none;
+                a {
+                border-bottom: solid 1px transparent;
+                font-size: 20px;
+                    @media screen and (min-width: 500px) {
+                        font-size: 28px;
+                    }
+                    @media screen and (min-width: 768px) {
+                        font-size: 48px;
+                    }
+                }
+
+                a:hover {
+                    color: $primary-color-red;
+                    border-bottom: solid 1px $primary-color-red;
+                    transition: all .3s ease-out;
+                }
+
+            }
+        }
+
+        .entry-content {
+            padding-top: 10px;
+            padding-bottom: 0px;
+        }
+
+        .entry-utility {
+            display: none;
+        }
+
+        .published {
+            text-decoration: none;
+            border-bottom: none;
+        }
+
+        .entry-meta {
+            span {
+                color: #999;
+            }
+            font-size: 12px;
+
+            @media screen and (min-width: 500px) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+#blog-single {
+    .entry-utility {
+        display: none;
+    }
+
+    #respond {
+        display: none;
+    }
+}
+
+//search page
+.page-title {
+    @media screen and (min-width: 1024px) {
+        font-size: 36px;
     }
 }

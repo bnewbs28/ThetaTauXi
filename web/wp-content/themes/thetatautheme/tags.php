@@ -1,9 +1,26 @@
 <?php get_header(); ?>
- 
+    <div id="interior-hero">
+        <div style="background-image: url('<?php
+            $heroImage = CFS()->get('interior_hero_image');
+            if (!empty($heroImage)) {
+                echo $heroImage;
+            } else {
+                $str1 = "/wp-content/themes/thetatautheme";
+                $str2 = "/img/roof.jpg";
+                echo $str1 . $str2;
+            }
+            ?>')"  class="interior-image">
+        </div>
+        <div class="hero-title-container">
+            <div class="hero-title">
+                <h1><?php echo get_the_title(); ?></h1>
+            </div>
+        </div>
+    </div>
         <div id="container">
             <div id="content">
- 
-                <?php the_post(); ?>          
+
+                <?php the_post(); ?>
 
 				<h1 class="page-title"><?php _e( 'Tag Archives:', 'hbd-theme' ) ?> <span><?php single_tag_title() ?></span></h1>
 
@@ -14,7 +31,7 @@
 				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
 				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
 				                </div><!-- #nav-above -->
-				<?php } ?>            
+				<?php } ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -45,15 +62,15 @@
 				                    </div><!-- #entry-utility -->
 				                </div><!-- #post-<?php the_ID(); ?> -->
 
-				<?php endwhile; ?>            
+				<?php endwhile; ?>
 
 				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
 				                <div id="nav-below" class="navigation">
 				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
 				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
 				                </div><!-- #nav-below -->
-				<?php } ?>                 
- 
+				<?php } ?>
+
             </div><!-- #content -->
 			<?php get_sidebar(); ?>
         </div><!-- #container -->

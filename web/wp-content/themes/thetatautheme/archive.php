@@ -1,18 +1,36 @@
 <?php get_header(); ?>
- 
+    <div id="interior-hero">
+        <div style="background-image: url('<?php
+            $heroImage = CFS()->get('interior_hero_image');
+            if (!empty($heroImage)) {
+                echo $heroImage;
+            } else {
+                $str1 = "/wp-content/themes/thetatautheme";
+                $str2 = "/img/roof.jpg";
+                echo $str1 . $str2;
+            }
+            ?>')"  class="interior-image">
+        </div>
+        <div class="hero-title-container">
+            <div class="hero-title">
+                <h1><?php echo get_the_title(); ?></h1>
+            </div>
+        </div>
+    </div>
         <div id="container">
             <div id="content">
- 
-                <?php the_post(); ?>          
+                <div id="content" class="entry-content blog">
+                    <div class="row">
+                <?php the_post(); ?>
 
 				<?php if ( is_day() ) : ?>
-				                <h1 class="page-title"><?php printf( __( 'Daily Archives: <span>%s</span>', 'hbd-theme' ), get_the_time(get_option('date_format')) ) ?></h1>
+				                <h3 class="page-title"><?php printf( __( 'Daily Archives: <span>%s</span>', 'hbd-theme' ), get_the_time(get_option('date_format')) ) ?></h3>
 				<?php elseif ( is_month() ) : ?>
-				                <h1 class="page-title"><?php printf( __( 'Monthly Archives: <span>%s</span>', 'hbd-theme' ), get_the_time('F Y') ) ?></h1>
+				                <h3 class="page-title"><?php printf( __( 'Monthly Archives: <span>%s</span>', 'hbd-theme' ), get_the_time('F Y') ) ?></h3>
 				<?php elseif ( is_year() ) : ?>
-				                <h1 class="page-title"><?php printf( __( 'Yearly Archives: <span>%s</span>', 'hbd-theme' ), get_the_time('Y') ) ?></h1>
+				                <h3 class="page-title"><?php printf( __( 'Yearly Archives: <span>%s</span>', 'hbd-theme' ), get_the_time('Y') ) ?></h3>
 				<?php elseif ( isset($_GET['paged']) && !empty($_GET['paged']) ) : ?>
-				                <h1 class="page-title"><?php _e( 'Blog Archives', 'hbd-theme' ) ?></h1>
+				                <h3 class="page-title"><?php _e( 'Blog Archives', 'hbd-theme' ) ?></h3>
 				<?php endif; ?>
 
 				<?php rewind_posts(); ?>
@@ -22,7 +40,7 @@
 				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
 				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
 				                </div><!-- #nav-above -->
-				<?php } ?>            
+				<?php } ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -51,17 +69,18 @@
 				                    </div><!-- #entry-utility -->
 				                </div><!-- #post-<?php the_ID(); ?> -->
 
-				<?php endwhile; ?>            
+				<?php endwhile; ?>
 
 				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
 				                <div id="nav-below" class="navigation">
 				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
 				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
 				                </div><!-- #nav-below -->
-				<?php } ?>                 
- 
+				<?php } ?>
+                    </div><!-- #content -->
+                </div><!-- #container -->
             </div><!-- #content -->
         </div><!-- #container -->
- 
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

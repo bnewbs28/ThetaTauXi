@@ -11,6 +11,11 @@
                 }
                 ?>')"  class="interior-image">
             </div>
+            <div class="hero-title-container">
+                <div class="hero-title">
+                    <h1><?php echo get_the_title(); ?></h1>
+                </div>
+            </div>
         </div>
         <div id="container">
             <div id="content">

@@ -1,7 +1,32 @@
-<div id="post-0" class="post error404 not-found">
-	<h1 class="entry-title"><?php _e( 'Not Found', 'hbd-theme' ); ?></h1>
-	<div class="entry-content">
-		<p><?php _e( 'Whoah! You are trying to access some crazy crap right now.  You know, that kind that <em>does not exist</em>.  So stop, take a deep breath, and think a little.  Maybe you can find what you want by searching.  Maybe you made a typo.  As a humble 404 Not Found page, there is only so much I can know.  But I wish you the best of luck at finding the thing you are looking for, whomever you are.', 'hbd-theme' ); ?></p>
-		<?php get_search_form(); ?>
-	</div><!-- .entry-content -->
-</div><!-- #post-0 -->
+<?php get_header(); ?>
+    <div id="interior-hero">
+        <div style="background-image: url('<?php
+            $heroImage = CFS()->get('interior_hero_image');
+            if (!empty($heroImage)) {
+                echo $heroImage;
+            } else {
+                $str1 = "/wp-content/themes/thetatautheme";
+                $str2 = "/img/roof.jpg";
+                echo $str1 . $str2;
+            }
+            ?>')"  class="interior-image">
+        </div>
+        <div class="hero-title-container">
+            <div class="hero-title">
+                <h1>404 Not Found</h1>
+            </div>
+        </div>
+    </div>
+        <div id="container">
+            <div id="content">
+                <div class="row">
+                    <div class="entry-content blog">
+                        <h2>Oh No!</h2>
+                        <p>It looks like the page you were looking for does not exist. Try seraching for it instead.</p>
+		                <?php get_search_form(); ?>
+                    </div>
+                </div>
+            </div><!-- #content -->
+        </div>
+    </div><!-- #container -->
+<?php get_footer(); ?>
