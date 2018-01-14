@@ -37,10 +37,84 @@ a {
     }
 }
 
+.one, .two, .three, .four,
+.five, .six, .seven, .eight,
+.nine, .ten, .eleven, .twelve {
+    margin-right: 2%;
+    float: left;
+}
+
+.one {
+    width: 6.5%;
+}
+
+.two {
+    width: 15%;
+}
+
+.three {
+    width: 23.5%;
+}
+
+.four {
+    width: 32%;
+}
+
+.five {
+    width: 40.5%;
+}
+
+.six {
+    width: 49%;
+}
+
+.seven {
+    width: 57.5%;
+}
+
+.eight {
+    width: 100%;
+
+@media screen and (min-width: 1024px) {
+    width: 74.5%;
+}
+
+}
+
+.nine {
+    width: 74.5%;
+}
+
+.ten {
+    width: 83%;
+}
+
+.eleven {
+    width: 91.5%;
+}
+
+.twelve {
+    margin-right: 0px;
+    width: 100%;
+}
+
+.last {
+    margin-right: 0px;
+}
+
 .clear {
     position: relative;
     display: block;
     clear: both;
+}
+
+.clear-mobile {
+    position: relative;
+    display: block;
+    clear: both;
+    @media screen and (min-width: 768px) {
+        clear: none;
+    }
 }
 
 h1 {
@@ -52,10 +126,11 @@ h1 {
 }
 
 .row {
-    width: 90%;
-    padding: 0px 5%;
+    width: 93%;
+    padding: 0px 2.5%;
     max-width: 1300px;
     margin: auto;
+    position: relative;
 }
 
 .fixed {
@@ -766,6 +841,11 @@ h1 {
 }
 
 #blog {
+
+    .entry-utility {
+        display: none;
+    }
+
     .post {
         position: relative;
         min-height: 100px;
@@ -955,15 +1035,16 @@ h1 {
         }
 
         @media screen and (min-width: 1024px) {
-            height: 600px;
-            width: 80%;
-            max-width: 1000px;
+            //height: 600px;
+            //width: 80%;
+            //max-width: 1000px;
         }
 
         .slide {
             height: 250px;
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
 
             @media (min-width: 500px) {
                 height: 325px;
@@ -977,9 +1058,9 @@ h1 {
             }
 
             @media screen and (min-width: 1024px) {
-                max-width: 1000px;
-                width: 80%;
-                height: 600px;
+                //max-width: 1000px;
+                //width: 80%;
+                //height: 600px;
             }
         }
 
@@ -1095,4 +1176,36 @@ h1 {
 
 #nav-below {
     text-align: center;
+    margin-bottom: 40px
+}
+
+#primary {
+    float: none;
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+        float: right;
+        width: 23.5%;
+        margin-top: 8px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0px;
+
+        @media screen and (min-width: 1024px) {
+            padding-left: 40px;
+        }
+    }
+
+    select {
+        width: 100%;
+        line-height: 40px;
+        height: 40px;
+    }
+
+    h3 {
+        margin-bottom: 0px;
+        margin-top: 40px;
+    }
 }

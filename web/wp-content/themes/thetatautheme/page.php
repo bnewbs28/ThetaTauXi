@@ -36,7 +36,6 @@
     <?php if ( get_post_custom_values('comments') ) comments_template() // Add a custom field with Name and Value of "comments" to enable comments on this page ?>
 
                 </div><!-- #content -->
-    			<?php get_sidebar(); ?>
             </div>
         </div><!-- #container -->
 
