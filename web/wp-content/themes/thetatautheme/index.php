@@ -21,6 +21,7 @@
         <div id="container">
             <div id="content" class="entry-content blog">
                 <div class="row">
+                    <div class="eight">
     		<?php /* Top post navigation */ ?>
     		<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
 
@@ -91,10 +92,11 @@
     		                </div><!-- #nav-below -->
     		<?php } ?>
             </div>
+                <div class="clear-mobile"></div>
+            	<?php get_sidebar(); ?>
+                <div class="clear"></div>
+            </div>
         </div><!-- #content -->
-
-    	<?php get_sidebar(); ?>
-
     </div><!-- #container -->
 </div>
 
