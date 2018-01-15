@@ -30,7 +30,43 @@ get_header();
         ?>
     </div>
 </div>
+<div id="News">
+    <div class="row">
+    <h1 class="news-title">Latest News</h1>
+    <?php
+       // the query
+       $the_query = new WP_Query( array(
+          'posts_per_page' => 3,
+       ));
+    ?>
+    <div class="news-stories-container">
+    <?php if ( $the_query->have_posts() ) : ?>
+      <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+          <a class="thumbnail-link" href="<?php the_permalink(); ?>">
+              <div class="home-post-thumbnail background-img" style="background-image: url('<?php $thumbnail = get_the_post_thumbnail_url();
+                  if (empty($thumbnail)) {
+                      $str1 = "/wp-content/themes/thetatautheme";
+                      $str2 = "/img/square_crest.jpg";
+                      echo $str1 . $str2;
+                  } else {
+                      echo $thumbnail;
+                  }
+                  ?>');">
+                  <div class="news-story-shade">
+                      <h2><?php the_title(); ?></h2>
+                      <p><?php the_excerpt(); ?></p>
+                  </div>
+              </div>
+          </a>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
 
+    <?php else : ?>
+      <p><?php __('No News'); ?></p>
+    <?php endif; ?>
+        </div>
+    </div>
+</div>
 <div id="about">
     <div id="about-left">
         <div class="row">
