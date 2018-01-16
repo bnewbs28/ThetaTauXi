@@ -57,6 +57,7 @@ get_header();
                           <h2><?php the_title(); ?></h2>
                       </div>
                       <p><?php the_excerpt(); ?></p>
+                      <div class="button-link">Read More</div>
                   </div>
               </div>
           </a>

@@ -119,6 +119,27 @@ a {
   display: block;
   margin: 0px 0px 15px 0px; }
 
+.button-link {
+  display: inline-block;
+  background-color: #8B0000;
+  padding: 10px 20px;
+  border: solid 1.5px #8B0000;
+  text-transform: uppercase;
+  transition: all .3s ease-out;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  color: #fff; }
+  @media screen and (min-width: 768px) {
+    .button-link {
+      margin-bottom: 70px;
+      font-size: 32px; } }
+  .button-link:hover {
+    background-color: transparent;
+    color: #8B0000; }
+
 #menu-button {
   display: block;
   height: 40px;
@@ -368,25 +389,6 @@ a {
         #about #about-left .about-content {
           font-size: 24px;
           line-height: 36px; } }
-    #about #about-left .button-link {
-      display: inline-block;
-      background-color: #8B0000;
-      padding: 10px 20px;
-      border: solid 1.5px #8B0000;
-      text-transform: uppercase;
-      transition: all .3s ease-out;
-      font-family: 'Lato', sans-serif;
-      font-size: 20px;
-      margin-top: 10px;
-      margin-bottom: 40px;
-      color: #fff; }
-      @media screen and (min-width: 768px) {
-        #about #about-left .button-link {
-          margin-bottom: 70px;
-          font-size: 32px; } }
-      #about #about-left .button-link:hover {
-        background-color: transparent;
-        color: #8B0000; }
 
 #about-pic {
   position: relative;
@@ -437,25 +439,6 @@ a {
         #rush #rush-right .rush-content {
           font-size: 24px;
           line-height: 36px; } }
-    #rush #rush-right .button-link {
-      display: inline-block;
-      background-color: #8B0000;
-      padding: 10px 20px;
-      border: solid 1.5px #8B0000;
-      text-transform: uppercase;
-      transition: all .3s ease-out;
-      font-family: 'Lato', sans-serif;
-      font-size: 20px;
-      margin-top: 10px;
-      margin-bottom: 40px;
-      color: #fff; }
-      @media screen and (min-width: 768px) {
-        #rush #rush-right .button-link {
-          margin-bottom: 70px;
-          font-size: 32px; } }
-      #rush #rush-right .button-link:hover {
-        background-color: transparent;
-        color: #8B0000; }
   #rush #rush-pic {
     position: relative;
     width: 100%;
@@ -913,7 +896,7 @@ a {
           height: 100%;
           width: 100%;
           background-color: rgba(0, 0, 0, 0.7);
-          padding: 10px;
+          padding: 10px 20px;
           box-sizing: border-box;
           transition: all .3s ease-out; }
           #News .news-stories-container .thumbnail-link .home-post-thumbnail .news-story-shade .title-container {
@@ -924,6 +907,16 @@ a {
               top: 50%;
               transform: translateY(-50%);
               margin: 0px auto;
-              width: 100%; }
+              width: 100%;
+              color: white; }
+          #News .news-stories-container .thumbnail-link .home-post-thumbnail .news-story-shade p {
+            color: white;
+            text-align: left; }
+          #News .news-stories-container .thumbnail-link .home-post-thumbnail .news-story-shade .button-link:hover {
+            color: white; }
       #News .news-stories-container .thumbnail-link:hover .news-story-shade, #News .news-stories-container .thumbnail-link:focus .news-story-shade {
         top: 0px; }
+        #News .news-stories-container .thumbnail-link:hover .news-story-shade h2, #News .news-stories-container .thumbnail-link:focus .news-story-shade h2 {
+          color: white; }
+        #News .news-stories-container .thumbnail-link:hover .news-story-shade p, #News .news-stories-container .thumbnail-link:focus .news-story-shade p {
+          color: white; }
