@@ -13,7 +13,7 @@ get_header();
     <div id="hero-slider"><!-- Editable via CFS (image should be put as background image to slides below) -->
         <?php
             $theta_hero_images = CFS()->get("home_page_images");
-            foreach ( $theta_hero_images as $theta_hero_image ) :
+            foreach ($theta_hero_images as $theta_hero_image) :
                 $theta_hero_slide = $theta_hero_image['home_page_image'];
                 $theta_hero_text = $theta_hero_image['home_page_tagline'];
         ?>
@@ -35,13 +35,13 @@ get_header();
     <h1 class="news-title">Latest News</h1>
     <?php
        // the query
-       $the_query = new WP_Query( array(
+       $the_query = new WP_Query(array(
           'posts_per_page' => 3,
        ));
     ?>
     <div class="news-stories-container">
-    <?php if ( $the_query->have_posts() ) : ?>
-      <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <?php if ($the_query->have_posts()) : ?>
+      <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
           <a class="thumbnail-link" href="<?php the_permalink(); ?>">
               <div class="home-post-thumbnail background-img" style="background-image: url('<?php $thumbnail = get_the_post_thumbnail_url();
                   if (empty($thumbnail)) {
