@@ -53,7 +53,9 @@ get_header();
                   }
                   ?>');">
                   <div class="news-story-shade">
-                      <h2><?php the_title(); ?></h2>
+                      <div class="title-container">
+                          <h2><?php the_title(); ?></h2>
+                      </div>
                       <p><?php the_excerpt(); ?></p>
                   </div>
               </div>

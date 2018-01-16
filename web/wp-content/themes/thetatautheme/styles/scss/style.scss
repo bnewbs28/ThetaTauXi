@@ -451,10 +451,14 @@ h1 {
 
         .gear-container {
             position: absolute;
-            bottom: -405px;
+            bottom: 0px;
             left: 0px;
             right: 0px;
             width: 100%;
+
+            @media screen and (min-width: 768px) {
+                bottom: -405px;
+            }
             .gear {
                 display: inline-block;
                 position: relative;
@@ -1239,7 +1243,7 @@ h1 {
         letter-spacing: 0.1em;
 
         @media screen and (min-width: 768px) {
-            font-size: 56px;
+            font-size: 48px;
         }
     }
 
@@ -1259,12 +1263,31 @@ h1 {
                 box-shadow: 5px 5px 10px #666;
                 .news-story-shade {
                     position: absolute;
-                    top: 316px;
+                    top: 296px;
                     height: 100%;
                     width: 100%;
                     background-color: rgba(#000, 0.7);
                     padding: 10px;
                     box-sizing: border-box;
+                    transition: all .3s ease-out;
+
+                    .title-container {
+                        height: 84px;
+                        position: relative;
+                        h2 {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            margin: 0px auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &:hover, &:focus {
+                .news-story-shade {
+                    top: 0px;
                 }
             }
         }
