@@ -66,11 +66,11 @@ get_header();
           </a>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?>
-
     <?php else : ?>
       <p><?php __('No News'); ?></p>
     <?php endif; ?>
         </div>
+         <a href="/news/" class="dark-link news-link">[ View All Stories ]</a>
     </div>
 </div>
 <div id="about">

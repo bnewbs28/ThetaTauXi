@@ -140,6 +140,11 @@ a {
     background-color: transparent;
     color: #8B0000; }
 
+.dark-link {
+  color: #000; }
+  .dark-link:hover {
+    color: #8B0000; }
+
 #menu-button {
   display: block;
   height: 40px;
@@ -873,7 +878,8 @@ a {
 
 #News {
   padding: 70px 0px;
-  position: relative; }
+  position: relative;
+  text-align: center; }
   @media screen and (min-width: 768px) {
     #News .gear-container {
       top: -295px; } }
@@ -897,10 +903,24 @@ a {
     text-align: center; }
     #News .news-stories-container .thumbnail-link {
       vertical-align: middle;
-      width: 30%;
       display: inline-block;
       margin: 0px 5px;
-      height: 400px; }
+      height: 400px;
+      width: 93.5%; }
+      #News .news-stories-container .thumbnail-link:nth-child(3) {
+        display: none; }
+      #News .news-stories-container .thumbnail-link:nth-child(2) {
+        display: none; }
+      @media screen and (min-width: 768px) {
+        #News .news-stories-container .thumbnail-link {
+          width: 48%; }
+          #News .news-stories-container .thumbnail-link:nth-child(2) {
+            display: inline-block; } }
+      @media screen and (min-width: 1210px) {
+        #News .news-stories-container .thumbnail-link {
+          width: 30%; }
+          #News .news-stories-container .thumbnail-link:nth-child(3) {
+            display: inline-block; } }
       #News .news-stories-container .thumbnail-link .home-post-thumbnail {
         width: 100%;
         height: 100%;
@@ -925,7 +945,11 @@ a {
               transform: translateY(-50%);
               margin: 0px auto;
               width: 100%;
-              color: white; }
+              color: white;
+              font-size: 20px; }
+              @media screen and (min-width: 1310px) {
+                #News .news-stories-container .thumbnail-link .home-post-thumbnail .news-story-shade .title-container h2 {
+                  font-size: 24px; } }
           #News .news-stories-container .thumbnail-link .home-post-thumbnail .news-story-shade p {
             color: white;
             text-align: left; }
@@ -937,3 +961,9 @@ a {
           color: white; }
         #News .news-stories-container .thumbnail-link:hover .news-story-shade p, #News .news-stories-container .thumbnail-link:focus .news-story-shade p {
           color: white; }
+  #News .news-link {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase; }
