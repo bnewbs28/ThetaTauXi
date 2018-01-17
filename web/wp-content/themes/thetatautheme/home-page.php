@@ -18,19 +18,22 @@ get_header();
                 $theta_hero_text = $theta_hero_image['home_page_tagline'];
         ?>
             <div style="background-image: url(<?php echo $theta_hero_slide ?>);" class="slide">
-                <div class="gear-container">
-                    <div class="gear"><h1 class="hero-text"><?php echo $theta_hero_text ?></h1></div>
-
+                <div class="hero-text-container">
+                    <h1 class="hero-text"><?php echo $theta_hero_text ?></h1>
                 </div>
-
+                <div class="gear-container">
+                    <div class="gear"></div>
+                </div>
             </div>
-
         <?php
             endforeach;
         ?>
     </div>
 </div>
 <div id="News">
+    <div class="gear-container">
+        <div class="gear"></div>
+    </div>
     <div class="row">
     <h1 class="news-title">Latest News</h1>
     <?php

@@ -436,10 +436,6 @@ h1 {
     #hero-slider {
         width: 100%;
 
-        .slick-list {
-            overflow: visible;
-        }
-
         .slide {
             height: 300px;
             width: 100%;
@@ -447,6 +443,7 @@ h1 {
             background-repeat: no-repeat;
             background-position: center;
             text-align: center;
+            position: relative;
 
             @media screen and (min-width: 768px) {
                 height: 500px;
@@ -456,55 +453,73 @@ h1 {
                 height: calc(100vh - 100px);
             }
 
-            .hero-text {
-                margin-top: 180px;
-                color: #fff;
-                text-transform: uppercase;
-                font-size: 28px;
-                letter-spacing: 0.1em;
-                background-color: $primary-color-red;
-                padding: 10px 0px;
-                font-family: 'Lato', sans-serif;
-                border-radius: 10px;
+            .hero-text-container {
+                position: absolute;
+                bottom: 20px;
+                text-align: center;
+                width: 100%;
+                z-index: 9999;
+                .hero-text {
+                    //margin-top: 180px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 28px;
+                    letter-spacing: 0.1em;
+                    background-color: $primary-color-red;
+                    padding: 10px 0px;
+                    font-family: 'Lato', sans-serif;
+                    border-radius: 10px;
+                    margin: auto;
+                    width: 80%;
 
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 56px;
+                        width: 700px;
+                    }
+                }
                 @media screen and (min-width: 768px) {
-                    font-size: 56px;
+                    bottom: 35px;
                 }
             }
 
-        }
-
-        .gear-container {
-            position: absolute;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
-            width: 100%;
-
-            @media screen and (min-width: 768px) {
-                bottom: -405px;
-            }
-            .gear {
-                display: inline-block;
-                position: relative;
-
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: top;
-                height: auto;
-                width: 93%;
-
-                @media screen and (min-width: 768px) {
-                background-image: url('img/gear-split.png');
-                width: 700px;
-                height: 700px;
-                }
-
-            }
         }
     }
 
+    .gear-container {
+        @media screen and (min-width: 768px) {
+            bottom: -405px;
+        }
+    }
+}
 
+.gear-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+
+    .gear {
+        display: inline-block;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        height: auto;
+        width: 93%;
+
+
+        @media screen and (min-width: 768px) {
+        background-image: url('img/gear-split.png');
+        width: 700px;
+        height: 700px;
+
+        }
+
+    }
 }
 
 #about {
@@ -800,10 +815,8 @@ h1 {
         //position: relative;
         width: 100%;
         text-align: center;
-
-
-
         margin: auto;
+
         .hero-title {
             display: inline-block;
             background-color: $primary-color-red;
@@ -1208,6 +1221,13 @@ h1 {
 
 #News {
     padding: 70px 0px;
+    position: relative;
+    .gear-container {
+        @media screen and (min-width: 768px) {
+            top: -295px;
+        }
+    }
+
     .news-title {
         margin-top: 0px;
         text-align: center;
