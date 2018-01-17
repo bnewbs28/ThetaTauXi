@@ -760,14 +760,15 @@ h1 {
     padding-top: 40px;
     h2 {
         font-family: 'Lato', sans-serif;
-        font-weight: 100;
         font-size: 32px;
         color: $primary-color-red;
         text-transform: uppercase;
         margin-bottom: 10px;
+        font-weight: bold;
 
         @media screen and (min-width: 1024px) {
             font-size: 48px;
+            font-weight: 100;
         }
     }
     @media screen and (min-width: 768px) {
@@ -834,7 +835,7 @@ h1 {
         .hero-title {
             display: inline-block;
             background-color: $primary-color-red;
-            padding: 10px 10px;
+            padding: 0px 10px;
             border-radius: 30px;
             width: 80%;
             box-sizing: border-box;
@@ -886,19 +887,19 @@ h1 {
                 opacity: 0;
                 height: 100%;
                 width: 100%;
-                background-color: rgba($primary-color-gold, 0.8);
+                background-color: rgba(#000, 0.8);
                 transition: all .3s ease-out;
                 position: relative;
 
                 h1 {
-                    color: $primary-color-red;
+                    color: $primary-color-gold;
                     position: absolute;
                     text-align: center;
                     right: 0px;
                     left: 0px;
                     top: 50%;
                     transform: translateY(-50%);
-                    font-size: 64px;
+                    font-size: 56px;
                     margin: 0px;
                 }
             }
@@ -909,7 +910,7 @@ h1 {
                     opacity: 1;
                     }
                     h1 {
-                        color: $primary-color-red;
+                        color: $primary-color-gold;
                     }
                 }
             }
@@ -962,11 +963,13 @@ h1 {
                 a {
                 border-bottom: solid 1px transparent;
                 font-size: 20px;
+                font-weight: bold;
                     @media screen and (min-width: 500px) {
                         font-size: 28px;
                     }
                     @media screen and (min-width: 768px) {
                         font-size: 48px;
+                        font-weight: 100;
                     }
                 }
 
@@ -1018,9 +1021,11 @@ h1 {
 
     h2 {
         font-size: 24px;
+        font-weight: bold;
 
         @media screen and (min-width: 768px) {
             font-size: 48px;
+            font-weight: 100;
         }
 
     }
@@ -1198,7 +1203,6 @@ h1 {
 }
 
 #nav-below {
-    text-align: center;
     margin-bottom: 40px
 }
 

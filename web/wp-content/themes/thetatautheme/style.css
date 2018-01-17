@@ -553,14 +553,15 @@ a {
   padding-top: 40px; }
   .entry-content h2 {
     font-family: 'Lato', sans-serif;
-    font-weight: 100;
     font-size: 32px;
     color: #8B0000;
     text-transform: uppercase;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-weight: bold; }
     @media screen and (min-width: 1024px) {
       .entry-content h2 {
-        font-size: 48px; } }
+        font-size: 48px;
+        font-weight: 100; } }
   @media screen and (min-width: 768px) {
     .entry-content {
       padding-bottom: 100px;
@@ -607,7 +608,7 @@ a {
     #interior-hero .hero-title-container .hero-title {
       display: inline-block;
       background-color: #8B0000;
-      padding: 10px 10px;
+      padding: 0px 10px;
       border-radius: 30px;
       width: 80%;
       box-sizing: border-box; }
@@ -644,24 +645,24 @@ a {
     opacity: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 204, 51, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     transition: all .3s ease-out;
     position: relative; }
     #blog .post .thumbnail-link .thumbnail-shade h1 {
-      color: #8B0000;
+      color: #FFCC33;
       position: absolute;
       text-align: center;
       right: 0px;
       left: 0px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 64px;
+      font-size: 56px;
       margin: 0px; }
   @media screen and (min-width: 768px) {
     #blog .post .thumbnail-link:hover .thumbnail-shade {
       opacity: 1; } }
   #blog .post .thumbnail-link:hover .thumbnail-shade h1 {
-    color: #8B0000; }
+    color: #FFCC33; }
   #blog .post .post-thumbnail {
     width: 100px;
     margin-top: 6px;
@@ -697,13 +698,15 @@ a {
       text-transform: none; }
       #blog .post .post-info h2 a {
         border-bottom: solid 1px transparent;
-        font-size: 20px; }
+        font-size: 20px;
+        font-weight: bold; }
         @media screen and (min-width: 500px) {
           #blog .post .post-info h2 a {
             font-size: 28px; } }
         @media screen and (min-width: 768px) {
           #blog .post .post-info h2 a {
-            font-size: 48px; } }
+            font-size: 48px;
+            font-weight: 100; } }
       #blog .post .post-info h2 a:hover {
         color: #8B0000;
         border-bottom: solid 1px #8B0000;
@@ -731,10 +734,12 @@ a {
 #main-content {
   margin-bottom: 70px; }
   #main-content h2 {
-    font-size: 24px; }
+    font-size: 24px;
+    font-weight: bold; }
     @media screen and (min-width: 768px) {
       #main-content h2 {
-        font-size: 48px; } }
+        font-size: 48px;
+        font-weight: 100; } }
   #main-content img {
     width: 100%;
     height: auto; }
@@ -857,7 +862,6 @@ a {
   display: none; }
 
 #nav-below {
-  text-align: center;
   margin-bottom: 40px; }
 
 #primary {
