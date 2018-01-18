@@ -12,14 +12,14 @@ get_header();
 <div id="hero">
     <div id="hero-slider"><!-- Editable via CFS (image should be put as background image to slides below) -->
         <?php
-            $theta_hero_images = CFS()->get("home_page_images");
+            $theta_hero_images = CFS()->get('home_page_images');
             foreach ($theta_hero_images as $theta_hero_image) :
                 $theta_hero_slide = $theta_hero_image['home_page_image'];
                 $theta_hero_text = $theta_hero_image['home_page_tagline'];
         ?>
-            <div style="background-image: url(<?php echo $theta_hero_slide ?>);" class="slide">
+            <div style="background-image: url('<?php echo $theta_hero_slide ?>');" class="slide">
                 <div class="hero-text-container">
-                    <h1 class="hero-text"><?php echo $theta_hero_text ?></h1>
+                    <h1 class="hero-text"><?php echo $theta_hero_text; ?></h1>
                 </div>
                 <div class="gear-container">
                     <div class="gear"></div>
@@ -30,7 +30,7 @@ get_header();
         ?>
     </div>
 </div>
-<div id="News">
+<div id="News" class="background-img" style="background-image: url('<?php echo CFS()->get('news_background'); ?>');">
     <div class="gear-container">
         <div class="gear"></div>
     </div>

@@ -374,9 +374,11 @@ a {
     width: 93%;
     background-image: url("img/gear-split.png");
     width: 300px;
-    height: 300px; }
+    height: 300px;
+    display: none; }
     @media screen and (min-width: 768px) {
       .gear-container .gear {
+        display: inline-block;
         width: 700px;
         height: 700px; } }
 
