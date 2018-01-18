@@ -30,7 +30,7 @@ get_header();
         ?>
     </div>
 </div>
-<div id="News" class="background-img" style="background-image: url('<?php echo CFS()->get('news_background'); ?>');">
+<div id="News">
     <div class="gear-container">
         <div class="gear"></div>
     </div>
