@@ -1,0 +1,191 @@
+html {
+
+}
+
+body {
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s ease-out;
+
+    &:visited {
+    }
+
+    &:hover {
+        color: $primary-color-gold;
+    }
+}
+
+.one, .two, .three, .four,
+.five, .six, .seven, .eight,
+.nine, .ten, .eleven, .twelve {
+    margin-right: 2%;
+    float: left;
+}
+
+.one {
+    width: 6.5%;
+}
+
+.two {
+    width: 15%;
+}
+
+.three {
+    width: 23.5%;
+}
+
+.four {
+    width: 32%;
+}
+
+.five {
+    width: 40.5%;
+}
+
+.six {
+    width: 49%;
+}
+
+.seven {
+    width: 57.5%;
+}
+
+.eight {
+    width: 100%;
+
+@media screen and (min-width: 1024px) {
+    width: 74.5%;
+}
+
+}
+
+.nine {
+    width: 74.5%;
+}
+
+.ten {
+    width: 83%;
+}
+
+.eleven {
+    width: 91.5%;
+}
+
+.twelve {
+    margin-right: 0px;
+    width: 100%;
+}
+
+.last {
+    margin-right: 0px;
+}
+
+.clear {
+    position: relative;
+    display: block;
+    clear: both;
+}
+
+.clear-mobile {
+    position: relative;
+    display: block;
+    clear: both;
+    @media screen and (min-width: 768px) {
+        clear: none;
+    }
+}
+
+h1 {
+
+}
+
+.screen-reader-text {
+    visibility: hidden;
+}
+
+.background-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.row {
+    width: 93%;
+    padding: 0px 2.5%;
+    max-width: 1300px;
+    margin: auto;
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+}
+
+.alignleft {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0px 15px 15px 0px;
+}
+
+.alignright {
+    position: relative;
+    display: block;
+    float: right;
+    margin: 0px 0px 15px 15px;
+}
+
+.aligncenter {
+    position: relative;
+    display: block;
+    float: none;
+    margin: 15px auto;
+}
+
+.alignnone {
+    position: relative;
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: $primary-color-red;
+    padding: 10px 20px;
+    border: solid 1.5px $primary-color-red;
+    text-transform: uppercase;
+    transition: all .3s ease-out;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    color: #fff;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 70px;
+        font-size: 32px;
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: $primary-color-red;
+    }
+}
+
+.dark-link {
+    color: #000;
+
+    &:hover {
+        color: $primary-color-red;
+    }
+}

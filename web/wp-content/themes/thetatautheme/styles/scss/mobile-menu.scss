@@ -1,0 +1,111 @@
+#menu-button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    .menu-bar {
+        height: 5px;
+        width: 40px;
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+
+        @media screen and (min-width: 768px) {
+            top: 40px;
+            right: 40px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+}
+
+.menu-open {
+    width: 100% !important;
+}
+
+#mobile-menu {
+
+    #mobile-menu-wrap {
+        width: 0%;
+        height: calc(100% - 70px);
+        position: fixed;
+        right: 0px;
+        top: 70px;
+        z-index: 9999;
+        transition: all .3s ease-out;
+
+        .screen {
+            width: 20%;
+            height: 100%;
+            float: left;
+
+            @media screen and (min-width: 768px) {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            top:100px;
+            height: calc(100% - 100px );
+        }
+
+        #mobile-menu-interior {
+            background-color: rgba(0,0,0,0.7);
+            float: right;
+            width: 80%;
+            height: 100%;
+            padding: 0px;
+            transition: all .3s ease-out;
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            @media screen and (min-width: 768px) {
+                width: 50%;
+            }
+
+            .menu {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .mobile-menu {
+
+                .sub-menu {
+                    display: none;
+                    li {
+                        width: 60%;
+                        box-sizing: border-box;
+                    }
+                }
+
+                .menu-item {
+                    width: 512px;
+                        a{
+                            display:  inline-block;
+                            text-transform: uppercase;
+                            font-size: 24px;
+                            padding: 20px;
+                            transition: all .3s ease-out;
+                            box-sizing: border-box;
+                            width: 100%;
+
+                            &:hover {
+                                background-color: rgba(136, 0, 0, 0.7);
+                                cursor: pointer;
+                                color: $primary-color-gold;
+                        }
+                    }
+
+                    a {
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

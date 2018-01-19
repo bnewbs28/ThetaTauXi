@@ -1,0 +1,97 @@
+#hero {
+    clear: both;
+    #hero-slider {
+        width: 100%;
+
+        .slide {
+            height: 300px;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            position: relative;
+
+            @media screen and (min-width: 768px) {
+                height: 500px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                height: calc(100vh - 100px);
+            }
+
+            .hero-text-container {
+                position: absolute;
+                bottom: 30px;
+                text-align: center;
+                width: 100%;
+                z-index: 9999;
+                .hero-text {
+                    //margin-top: 180px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 28px;
+                    letter-spacing: 0.1em;
+                    background-color: $primary-color-red;
+                    padding: 10px 0px;
+                    font-family: 'Lato', sans-serif;
+                    border-radius: 10px;
+                    margin: auto;
+                    width: 90%;
+                    max-width: 350px;
+
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 56px;
+                        max-width: none;
+                        width: 700px;
+
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    bottom: 35px;
+                }
+            }
+
+        }
+    }
+
+    .gear-container {
+        bottom: -174px;
+        @media screen and (min-width: 768px) {
+            bottom: -405px;
+        }
+    }
+}
+
+.gear-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+
+    .gear {
+        display: inline-block;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        height: auto;
+        width: 93%;
+        background-image: url('img/gear-split.png');
+        width: 300px;
+        height: 300px;
+        display: none;
+
+        @media screen and (min-width: 768px) {
+        display: inline-block;
+        width: 700px;
+        height: 700px;
+
+        }
+
+    }
+}

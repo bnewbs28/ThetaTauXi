@@ -2,6 +2,10 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
+var concat      = require('gulp-concat');
+var minifyCSS   = require('gulp-minify-css');
+var autoprefixer = require('gulp-autoprefixer');
+var rename      = require('gulp-rename');
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
@@ -22,7 +26,7 @@ gulp.task('browser-sync', function() {
 // Sass task, will run when any SCSS files change & BrowserSync
 // will auto-update browsers
 gulp.task('sass', function () {
-    return gulp.src('web/wp-content/themes/thetatautheme/styles/scss/*.scss')
+    return gulp.src('web/wp-content/themes/thetatautheme/styles/scss/style.scss')
         .pipe(sass())
         .pipe(gulp.dest('web/wp-content/themes/thetatautheme/'))
         .pipe(reload({stream:true}));

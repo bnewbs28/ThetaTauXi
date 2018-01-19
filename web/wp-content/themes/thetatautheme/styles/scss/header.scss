@@ -1,0 +1,121 @@
+#header {
+    position: relative;
+    height: 70px;
+    background-color: $primary-color-red;
+    padding: 0px 5%;
+
+    @media screen and (min-width: 768px) {
+        height: 100px;
+    }
+
+
+    .logo-container{
+        float: left;
+        .logo {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 36px;
+            margin-bottom: 0px;
+            font-family: 'Lato', sans-serif;
+
+            &:hover {
+                color: #fff;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 56px;
+                margin-top: 25px;
+            }
+        }
+
+
+
+        .xi {
+            color: $primary-color-gold;
+        }
+    }
+
+    h1 {
+        color: white;
+    }
+
+    .menu-header {
+        margin: 0px;
+        margin-top: 60px;
+        font-size: 24px;
+        float: right;
+        display: none;
+        li {
+            display: inline-block;
+            margin-left: 40px;
+            padding-bottom: 16px;
+            a {
+                color: #fff;
+                text-transform: uppercase;
+                font-family: 'Lato', sans-serif;
+
+
+                &:hover {
+                    color: $primary-color-gold;
+                }
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            display: block;
+        }
+    }
+}
+
+.selected {
+    display: block;
+}
+
+#menu-primary {
+    margin: 0px;
+    margin-top: -5px;
+    //position: relative;
+
+    li {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .sub-menu {
+        display: none;
+        position: absolute;
+        left: -20px;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 9999;
+        margin: 0px;
+        //height: 200px;
+        width: 200px;
+        top: 45px;
+        padding: 0px;
+
+        li {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            cursor: pointer;
+
+
+            a {
+                display: block;
+
+                margin: 0px;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                font-size: 18px;
+                transition: all .3s ease-out;
+
+                &:hover {
+                    background-color: rgba(136, 0, 0, 0.7);
+                    cursor: pointer;
+                    color: $primary-color-gold;
+
+                }
+            }
+
+        }
+    }
+}

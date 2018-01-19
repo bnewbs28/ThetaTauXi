@@ -1,0 +1,97 @@
+#footer {
+    text-align: center;
+    padding: 20px 20px 0px;
+    height: 275px;
+    background-color: $primary-color-red;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    @media screen and (min-width: 768px) {
+        height: 200px;
+    }
+    .contact-info {
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+
+        .contact-us-foot {
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        @media screen and (min-width: 768px) {
+            float: left;
+        }
+        a {
+            display: block;
+            line-height: 30px;
+        }
+    }
+
+    .map {
+        margin-bottom: 20px;
+
+        .map-link {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0px;
+            float: right;
+        }
+
+        p {
+            margin: 0px;
+            line-height: 30px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 100;
+
+        }
+    }
+
+    .legal {
+        text-align: center;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+
+    .social-links {
+        display: block;
+        width: 100%;
+        text-align: center;
+        clear:both;
+        a {
+            margin: 10px 20px;
+            display: inline-block;
+        }
+    }
+
+    .facebook {
+        fill:$icon-light-gray;
+        transition: all .3s ease-out;
+    }
+    .facebook:hover {
+        fill:#FFCC33;
+    }
+
+    .twitter {
+        fill:$icon-light-gray;
+        transition: all .3s ease-out;
+    }
+    .twitter:hover {
+        fill:#FFCC33;
+    }
+
+    .instagram {
+        fill:$icon-light-gray;
+        transition: all .3s ease-out;
+    }
+
+    .instagram:hover {
+        fill:#FFCC33;
+    }
+}
