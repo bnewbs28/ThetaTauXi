@@ -5,7 +5,6 @@
         font-family: 'Lato', sans-serif;
         font-size: 32px;
         color: $primary-color-red;
-        text-transform: uppercase;
         margin-bottom: 10px;
         font-weight: bold;
 
@@ -23,12 +22,17 @@
         margin-top: 40px;
         font-family: 'Lato', sans-serif;
         font-weight: 900;
+        font-size: 24px;
+        @media screen and (min-width: 768px) {
+            font-size: 28px;
+        }
     }
 
     p {
         font-family: 'Lato', sans-serif;
         font-weight: 100;
         font-size: 18px;
+        line-height: 28px;
     }
 
     a {
@@ -148,7 +152,6 @@
 
 
             h2 {
-                text-transform: none;
                 a {
                 border-bottom: solid 1px transparent;
                 font-size: 20px;
@@ -211,6 +214,7 @@
     h2 {
         font-size: 24px;
         font-weight: bold;
+        text-transform: none;
 
         @media screen and (min-width: 768px) {
             font-size: 48px;
@@ -223,9 +227,16 @@
 
         width: 100%;
         height: auto;
+        box-shadow: 0px 0px 10px #666;
 
         @media screen and (min-width: 500px) {
             width: initial;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-right: 40px;
+            margin-bottom: 26px;
+            margin-top: 8px;
         }
 
     }
