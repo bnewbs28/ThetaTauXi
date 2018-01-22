@@ -409,11 +409,14 @@
 #primary {
     float: none;
     width: 100%;
+    border-top: solid 1px #ddd;
+    margin-top: 40px;
 
     @media screen and (min-width: 1024px) {
         float: right;
         width: 23.5%;
         margin-top: 8px;
+        border-top: none;
     }
 
     ul {
