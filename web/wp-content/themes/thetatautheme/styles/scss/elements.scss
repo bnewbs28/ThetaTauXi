@@ -60,9 +60,12 @@ a {
 
 .eight {
     width: 100%;
+    border-bottom: solid 1px #ddd;
+    margin-bottom: 40px;
 
 @media screen and (min-width: 1024px) {
     width: 74.5%;
+    border-bottom: none;
 }
 
 }
