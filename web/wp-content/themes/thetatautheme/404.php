@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="entry-content blog">
                         <h2>Oh No!</h2>
-                        <p>It looks like the page you were looking for does not exist. Try seraching for it instead.</p>
+                        <p>It looks like the page you were looking for does not exist. Try searching for it instead.</p>
 		                <?php get_search_form(); ?>
                     </div>
                 </div>
